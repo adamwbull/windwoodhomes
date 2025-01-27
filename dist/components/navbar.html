@@ -1,12 +1,45 @@
-<header class="flex w-full overflow-hidden pt-10 pb-1">
-  <nav id="nav" x-data="{ open: false }" role="navigation" class="w-full">
-    <div class="container mx-auto flex flex-wrap items-center md:flex-no-wrap">
-      <div class="mr-4 md:mr-8">
-        <a href="/index.html" class="text-2xl font-signika font-bold">WINDWOOD HOMES</a>
+<div class="w-full px-5 md:px-20 py-3" style="background-color: rgb(31, 41, 55)">
+  <div class="container mx-auto flex justify-between items-center text-sm">
+    <div>OR CCB#000 | WA #000</div>
+    <div class="flex items-center gap-4">
+      <a href="tel:503-329-8857">503-329-8857</a>
+      <a href="mailto:windwoodhomes@gmail.com">windwoodhomes@gmail.com</a>
+    </div>
+  </div>
+</div>
+<header class="w-full py-8">
+  <style>
+    .business-card-line {
+      height: 1px;
+      background: currentColor;
+      opacity: 0.3;
+      width: 100%;
+      margin: 4px 0;
+    }
+    .business-card-line-big {
+      height: 3px;
+      background: currentColor;
+      opacity: 0.3;
+      width: 100%;
+      margin: 4px 0;
+    }
+  </style>
+  <nav id="nav" x-data="{ open: false }" role="navigation" class="container mx-auto">
+    <div class="flex flex-wrap items-center justify-between">
+      <!-- Logo/Brand -->
+      <div class="text-center md:text-left ml-2">
+        <a href="/index.html" class="inline-block">
+          <div class="business-card-line"></div>
+          <h1 class="text-3xl md:text-4xl font-signika my-2">WINDWOOD HOMES</h1>
+          <p class="font-nothingyoucoulddo text-lg text-center">Design - Build - Fine Cabinetry</p>
+          <div class="business-card-line"></div>
+        </a>
       </div>
-      <div class="ml-auto nav:hidden flex items-center justify-start">
+
+      <!-- Mobile Menu Button -->
+      <div class="nav:hidden">
         <button onclick="menuToggle()" @click="open = !open"
-          class="tap-highlight-transparent text-black dark:text-white w-5 h-5 relative focus:outline-none">
+          class="text-white w-10 h-10 relative focus:outline-none">
           <span class="sr-only">Open main menu</span>
           <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <span aria-hidden="true" class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
@@ -18,38 +51,14 @@
           </div>
         </button>
       </div>
-      <div id="menu" class="w-full h-0 transition-all ease-out duration-500 nav:transition-none nav:w-auto nav:flex-grow nav:flex nav:items-center">
-        <ul id="ulMenu" class="flex flex-col duration-300 ease-out nav:space-x-5 sm:transition-none mt-5 nav:flex-row nav:items-center nav:ml-auto nav:mt-0 nav:pt-0 nav:border-0">
-          <li class="group transition duration-300">
-            <a href="/dist/portfolio.html" class="font-signika text-2xl">ALL PHOTOS
-              <span class="hidden lg:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
-            </a>
-          </li>
-          <li class="group transition duration-300 lg:ml-0 ml-4">
-            <a href="/dist/cabinetry.html" class="font-signika text-xl lg:text-2xl">CABINETRY
-              <span class="hidden lg:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
-            </a>
-          </li>
-          <li class="group transition duration-300 lg:ml-0 ml-4">
-            <a href="/dist/interiors.html" class="font-signika text-xl lg:text-2xl">INTERIORS
-              <span class="hidden lg:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
-            </a>
-          </li>
-          <li class="group transition duration-300 lg:ml-0 ml-4">
-            <a href="/dist/kitchen.html" class="font-signika text-xl lg:text-2xl">KITCHEN
-              <span class="hidden lg:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
-            </a>
-          </li>
-          <li class="group transition duration-300">
-            <a href="/dist/about_me.html" class="font-signika text-2xl">ABOUT
-              <span class="hidden lg:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
-            </a>
-          </li>
-          <li class="group transition duration-300">
-            <a href="/dist/contact.html" class="font-signika text-2xl">CONTACT
-              <span class="hidden lg:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
-            </a>
-          </li>
+
+      <!-- Navigation Links -->
+      <div id="menu" class="w-full h-0 overflow-hidden transition-all ease-out duration-500 nav:h-auto nav:w-auto nav:flex nav:items-center">
+        <ul id="ulMenu" class="flex flex-col nav:flex-row nav:items-center space-y-4 nav:space-y-0 nav:space-x-8 mt-4 nav:mt-0 ml-4">
+          <li><a href="/dist/interiors.html" class="font-signika text-xl hover:opacity-70 transition">INTERIORS</a></li>
+          <li><a href="/dist/exteriors.html" class="font-signika text-xl hover:opacity-70 transition">EXTERIORS</a></li>
+          <li><a href="/dist/about.html" class="font-signika text-xl hover:opacity-70 transition">ABOUT</a></li>
+          <li><a href="/dist/contact.html" class="font-signika text-xl hover:opacity-70 transition">CONTACT</a></li>
         </ul>
       </div>
     </div>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Windwood Homes - About Us</title>
+  <meta name="description"
+    content="Windwood Homes was established in 1995 as one of the premiere columbia Gorge home builders specializing in custom design and fine cabinetary.  We are dedicated to Superior craftsmanship from start to finish and strive to create exceptional spaces for living an Exceptional life in the Gorge!">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+  <link rel="stylesheet" href="output.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <!-- Start - Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
+  <!-- End - Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      content: ["./dist/*.{html,js}"],
+      theme: {
+        extend: {
+          screens: {
+            'nav': '960px',
+          },
+          fontFamily: {
+            'nothingyoucoulddo': ['Nothing You Could Do', 'cursive'],
+            'signika': ['Signika', 'sans-serif'],
+          },
+        },
+      },
+      plugins: [],
+    }
+  </script>
+  <script src="load-components.js"></script>
+</head>
+
+<body class="bg-black text-white min-h-screen opacity-0 animate-fade-in transition duration-500">
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+  
+  <!-- Main Content Container -->
+  <div class="px-5 md:px-20">
+    <div class="container mx-auto">
+      <h1 class="text-4xl pt-10 pb-8"><b>ABOUT US</b></h1>
+      <div class="grid grid-cols-2 gap-14 md:gap-20">
+        <div class="col-span-2 md:col-span-1">
+          <div
+            class="bg-neutral-900 p-5 pb-28 m-6 md:m-12 shadow-lg border border-neutral-800 hover:rotate-0 transition duration-500 -rotate-6 relative">
+            <img src="assets/exteriors/DSC_0457.JPG" alt=""
+              class="smooth-edges flex flex-col w-full aspect-square object-cover h-auto" />
+            <div class="absolute bottom-0 left-0 right-0 text-center">
+              <p class="text-slate-200 pb-7 h-full text-xl font-nothingyoucoulddo">our passion is building your perfect home</p>
+            </div>
+          </div>
+
+        </div>
+        <section class="font-normal text-center text-base md:text-start mx-3 col-span-2 md:col-span-1 my-auto">
+          <div class="block md:hidden">
+            <p class="text-3xl font-serif font-bold mb-1">Hi there,</p>
+            <p class="text-3xl font-serif font-bold mb-6">we're Windwood Homes!<span class="animate-wave">👋</span></p>
+          </div>
+          <p class="hidden md:block text-3xl font-serif font-bold mb-6">Hi there, we're Windwood Homes!
+            <span class="animate-wave">👋</span>
+          </p>
+          <p class="mb-4">
+            Windwood Homes was established in 1995 as one of the premiere columbia Gorge home builders specializing in custom design and fine cabinetary.  We are dedicated to Superior craftsmanship from start to finish and strive to create exceptional spaces for living an Exceptional life in the Gorge!
+          </p>
+        </section>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script src="fade_in.js"></script>
+  <script src="menu.js"></script>
+</body>
+
+</html>

@@ -30,84 +30,108 @@
     tailwind.config = {
       content: ["./dist/*.{html,js}"],
       theme: {
-        extend:
-                {
-                  screens: {
-                    'nav': '1138px', // Custom breakpoint for navbar
-                  },
-                  fontFamily: {
-                    'nothingyoucoulddo': ['Nothing You Could Do', 'cursive'],
-                    'signika': ['Signika', 'sans-serif'],
-                  },
-                },
+        extend: {
+          colors: {
+            'wood-brown': '#4A3B2F',
+            'silver-blue': '#E8ECEF',
+          },
+          screens: {
+            'nav': '960px',
+          },
+          fontFamily: {
+            'nothingyoucoulddo': ['Nothing You Could Do', 'cursive'],
+            'signika': ['Signika', 'sans-serif'],
+          },
+        },
       },
       plugins: [],
     }
   </script>
   <script src="dist/load-components.js"></script>
+  <!-- Add Nothing You Could Do font -->
+  <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
 </head>
 
-<body
-  class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
-  <!-- Navbar -->
+<body class="bg-black text-white min-h-screen opacity-0 animate-fade-in transition duration-500">
+  <!-- Top Strip -->
   <div id="navbar-placeholder"></div>
-  <!-- Content -->
-  <div class="container mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-10">
-      <a href="dist/cabinetry.html" class="group relative overflow-hidden bg-black/5 dark:bg-white/5 rounded-lg p-4 nav:aspect-square text-center hover:bg-black/10 dark:hover:bg-white/10 transition duration-300">
-        <div class="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1675789203977-70070dae0799?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" 
-               alt="" 
-               class="w-full h-full object-cover opacity-25 dark:opacity-20"/>
-        </div>
-        <div class="relative z-10 flex flex-col justify-center h-full">
-          <h2 class="text-3xl font-signika mb-4">CABINETRY</h2>
-          <p class="text-gray-600 dark:text-gray-400">Custom cabinets and woodwork</p>
-        </div>
-      </a>
-      <a href="dist/interiors.html" class="group relative overflow-hidden bg-black/5 dark:bg-white/5 rounded-lg p-4 nav:aspect-square text-center hover:bg-black/10 dark:hover:bg-white/10 transition duration-300">
-        <div class="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1674985594089-eab270e843c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1963&q=80" 
-               alt="" 
-               class="w-full h-full object-cover opacity-25 dark:opacity-20"/>
-        </div>
-        <div class="relative z-10 flex flex-col justify-center h-full">
-          <h2 class="text-3xl font-signika mb-4">INTERIORS</h2>
-          <p class="text-gray-600 dark:text-gray-400">Interior design and finishing</p>
-        </div>
-      </a>
-      <a href="dist/kitchen.html" class="group relative overflow-hidden bg-black/5 dark:bg-white/5 rounded-lg p-4 nav:aspect-square text-center hover:bg-black/10 dark:hover:bg-white/10 transition duration-300">
-        <div class="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1676978647680-0e60a584c5fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" 
-               alt="" 
-               class="w-full h-full object-cover opacity-25 dark:opacity-20"/>
-        </div>
-        <div class="relative z-10 flex flex-col justify-center h-full">
-          <h2 class="text-3xl font-signika mb-4">KITCHEN</h2>
-          <p class="text-gray-600 dark:text-gray-400">Kitchen remodels and design</p>
-        </div>
-      </a>
-      <a href="dist/portfolio.html" class="group relative overflow-hidden bg-black/5 dark:bg-white/5 rounded-lg p-4 nav:aspect-square text-center hover:bg-black/10 dark:hover:bg-white/10 transition duration-300">
-        <div class="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1624385690664-38a3af477cd9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" 
-               alt="" 
-               class="w-full h-full object-cover opacity-25 dark:opacity-20"/>
-        </div>
-        <div class="relative z-10 flex flex-col justify-center h-full">
-          <h2 class="text-3xl font-signika mb-4">ALL PHOTOS</h2>
-          <p class="text-gray-600 dark:text-gray-400">View complete portfolio</p>
-        </div>
-      </a>
-    </div>
+  
+  <!-- Hero Section - Full Width -->
+  <div class="relative w-full" style="height: 50vh;">
+    <img 
+      src="dist/assets/home.JPG" 
+      alt="Windwood Homes" 
+      class="absolute inset-0 w-full h-full object-cover"
+    >
+    <div class="absolute inset-0 bg-black/10"></div>
   </div>
-  <!-- Footer -->
-  <div id="footer-placeholder"></div>
-  <!-- Script for the LightBox -->
-  <script>
-    Fancybox.bind("[data-fancybox]", {});
-  </script>
-  <script src="dist/fade_in.js"></script>
-  <script src="dist/menu.js"></script>
+
+  <!-- Main Content Container -->
+  <div class="">
+    <!-- Welcome Section -->
+    <div class="w-full" style="background-color: rgb(31, 41, 55)">
+      <div class="text-center py-16">
+        <div class="inline-block">
+          <p class="text-sm uppercase tracking-wider mb-2">Welcome to</p>
+          <div class="business-card-line-big bg-silver-blue"></div>
+          <h1 class="text-5xl md:text-7xl font-signika mb-0">WINDWOOD HOMES</h1>
+          <div class="business-card-line-big bg-silver-blue"></div>
+          <p class="text-xl mt-4">Beautiful custom built homes in the Columbia River Gorge.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="text-center pt-16">
+      <div class="inline-block">
+        <p class="text-sm uppercase tracking-wider mb-2">What we do</p>
+        <div class="business-card-line-big bg-silver-blue"></div>
+        <h2 class="text-6xl md:text-6xl font-signika mb-0">SERVICES</h2>
+        <div class="business-card-line-big bg-silver-blue"></div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 py-10">
+        <a href="dist/interiors.html" class="group relative overflow-hidden bg-white/80 rounded-lg p-8 aspect-square text-center hover:bg-white/90 transition duration-300">
+          <div class="absolute inset-0 z-0">
+            <img src="dist/assets/interiors/Attachment.jpg" 
+                 alt="Interior Design" 
+                 class="w-full h-full object-cover"/>
+            <div class="absolute inset-0 bg-black/50"></div>
+          </div>
+          <div class="relative z-10 flex flex-col justify-center items-center h-full">
+            <h2 class="text-4xl font-signika mb-4">INTERIORS</h2>
+            <div class="business-card-line-big bg-silver-blue mx-auto" style="width: 15vw;"></div>
+            <p class="text-xl mt-4">Interior design and finishing</p>
+          </div>
+        </a>
+        
+        <a href="dist/exteriors.html" class="group relative overflow-hidden bg-white/80 rounded-lg p-8 aspect-square text-center hover:bg-white/90 transition duration-300">
+          <div class="absolute inset-0 z-0">
+            <img src="dist/assets/exteriors/1.jpeg" 
+                 alt="Exterior Design" 
+                 class="w-full h-full object-cover"/>
+            <div class="absolute inset-0 bg-black/50"></div>
+          </div>
+          <div class="relative z-10 flex flex-col justify-center items-center h-full">
+            <h2 class="text-4xl font-signika mb-4">EXTERIORS</h2>
+            <div class="business-card-line-big bg-silver-blue mx-auto" style="width: 15vw;"></div>
+            <p class="text-xl mt-4">Exterior design and construction</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+    <!-- Script for the LightBox -->
+    <script>
+      Fancybox.bind("[data-fancybox]", {});
+    </script>
+    <script src="dist/fade_in.js"></script>
+    <script src="dist/menu.js"></script>
+  </div>
 </body>
 
 </html>
